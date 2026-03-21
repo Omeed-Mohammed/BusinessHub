@@ -58,26 +58,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTOs\Login\LoginRequestDto.cs" />
+    <Compile Include="DTOs\Login\UserAuthDto.cs" />
     <Compile Include="DTOs\Permissions\PermissionDto.cs" />
     <Compile Include="DTOs\RolePermission\PermissionSummaryDto.cs" />
     <Compile Include="DTOs\RolePermission\RolePermissionDto.cs" />
     <Compile Include="DTOs\RolePermission\RoleSummaryDto.cs" />
     <Compile Include="DTOs\Roles\RoleDto.cs" />
+    <Compile Include="DTOs\UserRole\UserRoleDto.cs" />
+    <Compile Include="DTOs\UserRole\UserRoleRoleDto.cs" />
+    <Compile Include="DTOs\UserRole\UserRoleUserDto.cs" />
     <Compile Include="DTOs\Users\ChangeUserPasswordRequestDto.cs" />
     <Compile Include="DTOs\Users\CreateUserRequestDto.cs" />
     <Compile Include="DTOs\Users\UserDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Login\LoginRepository.cs" />
     <Compile Include="Repositories\Permissions\PermissionRepository.cs" />
     <Compile Include="Repositories\RolePermission\RolePermissionRepository.cs" />
     <Compile Include="Repositories\Roles\RoleRepository.cs" />
+    <Compile Include="Repositories\UserRole\UserRoleRepository.cs" />
     <Compile Include="Repositories\Users\UserRepository.cs" />
+    <Compile Include="Services\Login\LoginServices.cs" />
     <Compile Include="Services\Permissions\PermissionService.cs" />
     <Compile Include="Services\RolePermission\RolePermissionService.cs" />
     <Compile Include="Services\Roles\RoleService.cs" />
+    <Compile Include="Services\UserRole\UserRoleService.cs" />
     <Compile Include="Services\Users\UserServices.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessHub.Core\BusinessHub.Core.csproj">
+      <Project>{142ffa72-116d-41c7-9eb3-7e072172f09e}</Project>
+      <Name>BusinessHub.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

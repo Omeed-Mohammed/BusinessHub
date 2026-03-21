@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>9a10aabf-a40e-40c6-b6de-55919d1498c9</ProjectGuid>
+    <ProjectGuid>{9A10AABF-A40E-40C6-B6DE-55919D1498C9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BusinessHub.Modules.DebtFlow</RootNamespace>
@@ -31,24 +31,40 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DTOs\Debts\CreateSupplierDebtRequestDto.cs" />
+    <Compile Include="DTOs\Debts\SupplierDebtDto.cs" />
+    <Compile Include="DTOs\Debts\UpdateSupplierDebtRequestDto.cs" />
+    <Compile Include="DTOs\Invoices\SupplierPaymentInvoiceDto.cs" />
+    <Compile Include="DTOs\Payments\CreateSupplierPaymentTransactionRequestDto.cs" />
+    <Compile Include="DTOs\Payments\SupplierPaymentDto.cs" />
+    <Compile Include="DTOs\Payments\SupplierPaymentViewDto.cs" />
+    <Compile Include="DTOs\Payments\UpdateSupplierPaymentRequestDto.cs" />
+    <Compile Include="DTOs\Requests\CreateSupplierRequestDto.cs" />
+    <Compile Include="DTOs\Requests\UpdateSupplierRequestDto.cs" />
+    <Compile Include="DTOs\Supplier\SupplierDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\Debts\" />
+    <Folder Include="Repositories\Invoices\" />
+    <Folder Include="Repositories\Payments\" />
+    <Folder Include="Repositories\Requests\" />
+    <Folder Include="Repositories\Supplier\" />
+    <Folder Include="Services\Debts\" />
+    <Folder Include="Services\Invoices\" />
+    <Folder Include="Services\Payments\" />
+    <Folder Include="Services\Requests\" />
+    <Folder Include="Services\Supplier\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>

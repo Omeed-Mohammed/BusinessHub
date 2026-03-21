@@ -77,6 +77,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessHub.Core\BusinessHub.Core.csproj">
+      <Project>{142ffa72-116d-41c7-9eb3-7e072172f09e}</Project>
+      <Name>BusinessHub.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BusinessHub.Modules.Persons\BusinessHub.Modules.Persons.csproj">
       <Project>{b81b74b9-d622-42ca-88e6-2ec23cc408b6}</Project>
       <Name>BusinessHub.Modules.Persons</Name>
