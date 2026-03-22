@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36930.0 d17.14
+VisualStudioVersion = 17.14.36930.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessHub.WinForms", "BusinessHub\BusinessHub.WinForms.csproj", "{254D2106-5D60-4C6C-953E-6E74B46E7E4F}"
 EndProject
@@ -24,6 +24,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DebtFlow", "DebtFlow", "{643747C7-0307-8931-84D8-A7D1915E22E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persons", "Persons", "{C5B541DC-4E46-4C55-9818-98EB2CB2AA1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Departments", "Departments", "{5DD28DF0-40A1-400F-A9E0-198AF776BFB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessHub.Modules.Departments", "BusinessHub.Modules.Departments\BusinessHub.Modules.Departments.csproj", "{19136D65-7C9E-460C-9E12-6D202B44E246}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,10 @@ Global
 		{9A10AABF-A40E-40C6-B6DE-55919D1498C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A10AABF-A40E-40C6-B6DE-55919D1498C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A10AABF-A40E-40C6-B6DE-55919D1498C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19136D65-7C9E-460C-9E12-6D202B44E246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19136D65-7C9E-460C-9E12-6D202B44E246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19136D65-7C9E-460C-9E12-6D202B44E246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19136D65-7C9E-460C-9E12-6D202B44E246}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +72,8 @@ Global
 		{7DC331D0-3EC4-40A6-69FB-1CBEB2E0D1EA} = {24985EDA-DC18-4D3E-A871-81E0DB32CEF5}
 		{643747C7-0307-8931-84D8-A7D1915E22E5} = {24985EDA-DC18-4D3E-A871-81E0DB32CEF5}
 		{C5B541DC-4E46-4C55-9818-98EB2CB2AA1A} = {24985EDA-DC18-4D3E-A871-81E0DB32CEF5}
+		{5DD28DF0-40A1-400F-A9E0-198AF776BFB1} = {24985EDA-DC18-4D3E-A871-81E0DB32CEF5}
+		{19136D65-7C9E-460C-9E12-6D202B44E246} = {5DD28DF0-40A1-400F-A9E0-198AF776BFB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {26BBD681-4B96-4ECF-B29E-4B7B5F005AF3}
