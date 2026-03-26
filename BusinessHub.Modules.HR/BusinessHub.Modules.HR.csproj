@@ -42,12 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTOs\CreateDepartmentRequestDto.cs" />
-    <Compile Include="DTOs\DepartmentDto.cs" />
-    <Compile Include="DTOs\UpdateDepartmentRequestDto.cs" />
+    <Compile Include="DTOs\Departments\CreateDepartmentRequestDto.cs" />
+    <Compile Include="DTOs\Departments\DepartmentDto.cs" />
+    <Compile Include="DTOs\Departments\UpdateDepartmentRequestDto.cs" />
+    <Compile Include="DTOs\Employees\CreateEmployeeRequestDto.cs" />
+    <Compile Include="DTOs\Employees\EmployeeDepartmentDto.cs" />
+    <Compile Include="DTOs\Employees\EmployeeDto.cs" />
+    <Compile Include="DTOs\Employees\EmployeeRoleDto.cs" />
+    <Compile Include="DTOs\Employees\EmployeeSearchResultDto.cs" />
+    <Compile Include="DTOs\Employees\UpdateEmployeeRequestDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\DepartmentRepository.cs" />
-    <Compile Include="Services\DepartmentService.cs" />
+    <Compile Include="Repositories\Departments\DepartmentRepository.cs" />
+    <Compile Include="Repositories\Employees\EmployeeRepository.cs" />
+    <Compile Include="Services\Departments\DepartmentService.cs" />
+    <Compile Include="Services\Employees\EmployeeService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

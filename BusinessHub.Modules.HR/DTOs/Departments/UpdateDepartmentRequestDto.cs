@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessHub.Modules.Departments.DTOs
+namespace BusinessHub.Modules.HR.DTOs.Departments
 {
     public class UpdateDepartmentRequestDto
     {

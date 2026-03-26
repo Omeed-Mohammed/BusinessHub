@@ -1,5 +1,5 @@
 ﻿using BusinessHub.Core.Common;
-using BusinessHub.Modules.Departments.DTOs;
+using BusinessHub.Modules.HR.DTOs.Departments;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessHub.Modules.Departments.Repositories
+namespace BusinessHub.Modules.HR.Repositories.Departments
 {
     public class DepartmentRepository
     {
@@ -19,7 +19,7 @@ namespace BusinessHub.Modules.Departments.Repositories
         public static int AddDepartment(DepartmentDto departmentRequest)
         {
             using (var connection = new SqlConnection(_cs))
-            using (var command = new SqlCommand("SP_Department_Add", connection))
+            using (var command = new SqlCommand("hr.SP_Department_Add", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -35,7 +35,7 @@ namespace BusinessHub.Modules.Departments.Repositories
         public static bool UpdateDepartment(DepartmentDto departmentUpdate)
         {
             using (var connection = new SqlConnection(_cs))
-            using (var command = new SqlCommand("SP_Department_Update", connection))
+            using (var command = new SqlCommand("hr.SP_Department_Update", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
 
@@ -61,7 +61,7 @@ namespace BusinessHub.Modules.Departments.Repositories
 
             using (SqlConnection conn = new SqlConnection(_cs))
             {
-                using (SqlCommand cmd = new SqlCommand("SP_Department_GetAll", conn))
+                using (SqlCommand cmd = new SqlCommand("hr.SP_Department_GetAll", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -113,7 +113,7 @@ namespace BusinessHub.Modules.Departments.Repositories
         public static DepartmentDto GetDepartmentByID(int DepartmentID)
         {
             using (var connection = new SqlConnection(_cs))
-            using (var command = new SqlCommand("SP_Department_GetByID", connection))
+            using (var command = new SqlCommand("hr.SP_Department_GetByID", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add("@DepartmentID", SqlDbType.Int).Value = DepartmentID;
@@ -163,7 +163,7 @@ namespace BusinessHub.Modules.Departments.Repositories
         public static DepartmentDto GetDepartmentByName(string departmentName)
         {
             using (var connection = new SqlConnection(_cs))
-            using (var command = new SqlCommand("SP_Department_GetByName", connection))
+            using (var command = new SqlCommand("hr.SP_Department_GetByName", connection))
             {
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.Add("@DepartmentName", SqlDbType.NVarChar,100).Value = departmentName;
