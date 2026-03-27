@@ -1,13 +1,13 @@
 ﻿using BusinessHub.Core.Common;
-using BusinessHub.Modules.Departments.DTOs.Employees;
-using BusinessHub.Modules.Departments.Repositories.Employees;
+using BusinessHub.Modules.HR.DTOs;
+using BusinessHub.Modules.HR.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessHub.Modules.Departments.Services.Employees
+namespace BusinessHub.Modules.HR.Services
 {
     public class EmployeeService
     {
@@ -113,7 +113,9 @@ namespace BusinessHub.Modules.Departments.Services.Employees
             return EmployeeRepository.SearchEmployees(firstName, lastName, isActive, CurrentUser.Username);
         }
 
-        public static (EmployeeDto employee, List<EmployeeRoleDto> roles, List<EmployeeDepartmentDto> departments)
+
+
+        public static (EmployeeDto employee, List<EmployeeRoleDto> roles, List<EmployeeDepartmentInfoDto> departments)
              GetEmployeeProfile(int employeeId, bool? isActive)
         {
             if (employeeId <= 0)

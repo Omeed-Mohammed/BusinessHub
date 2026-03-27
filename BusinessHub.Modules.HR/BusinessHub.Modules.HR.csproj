@@ -7,8 +7,8 @@
     <ProjectGuid>{19136D65-7C9E-460C-9E12-6D202B44E246}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BusinessHub.Modules.Departments</RootNamespace>
-    <AssemblyName>BusinessHub.Modules.Departments</AssemblyName>
+    <RootNamespace>BusinessHub.Modules.HR</RootNamespace>
+    <AssemblyName>BusinessHub.Modules.HR</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -45,16 +45,19 @@
     <Compile Include="DTOs\Departments\CreateDepartmentRequestDto.cs" />
     <Compile Include="DTOs\Departments\DepartmentDto.cs" />
     <Compile Include="DTOs\Departments\UpdateDepartmentRequestDto.cs" />
+    <Compile Include="DTOs\EmployeeDepartment\EmployeeDepartmentDto.cs" />
     <Compile Include="DTOs\Employees\CreateEmployeeRequestDto.cs" />
-    <Compile Include="DTOs\Employees\EmployeeDepartmentDto.cs" />
+    <Compile Include="DTOs\Employees\EmployeeDepartmentInfoDto.cs" />
     <Compile Include="DTOs\Employees\EmployeeDto.cs" />
     <Compile Include="DTOs\Employees\EmployeeRoleDto.cs" />
     <Compile Include="DTOs\Employees\EmployeeSearchResultDto.cs" />
     <Compile Include="DTOs\Employees\UpdateEmployeeRequestDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Departments\DepartmentRepository.cs" />
+    <Compile Include="Repositories\EmployeeDepartment\EmployeeDepartmentRepository.cs" />
     <Compile Include="Repositories\Employees\EmployeeRepository.cs" />
     <Compile Include="Services\Departments\DepartmentService.cs" />
+    <Compile Include="Services\EmployeeDepartments\EmployeeDepartmentService.cs" />
     <Compile Include="Services\Employees\EmployeeService.cs" />
   </ItemGroup>
   <ItemGroup />

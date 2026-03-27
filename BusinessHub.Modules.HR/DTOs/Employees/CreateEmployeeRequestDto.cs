@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessHub.Modules.Departments.DTOs.Employees
+namespace BusinessHub.Modules.HR.DTOs
 {
     public class CreateEmployeeRequestDto
     {

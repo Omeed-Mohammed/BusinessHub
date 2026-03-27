@@ -1,5 +1,4 @@
-﻿using BusinessHub.Modules.Departments.DTOs.Employees;
-using BusinessHub.Modules.HR.DTOs.Departments;
+﻿using BusinessHub.Modules.HR.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -9,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessHub.Modules.Departments.Repositories.Employees
+namespace BusinessHub.Modules.HR.Repositories
 {
     public class EmployeeRepository
     {
@@ -276,12 +275,12 @@ namespace BusinessHub.Modules.Departments.Repositories.Employees
             return list;
         }
 
-        public static (EmployeeDto employee, List<EmployeeRoleDto> roles, List<EmployeeDepartmentDto> departments)
+        public static (EmployeeDto employee, List<EmployeeRoleDto> roles, List<EmployeeDepartmentInfoDto> departments)
           GetEmployeeProfile(int employeeId, bool? isActive, string currentUser)
         {
             EmployeeDto employee = null;
             var roles = new List<EmployeeRoleDto>();
-            var departments = new List<EmployeeDepartmentDto>();
+            var departments = new List<EmployeeDepartmentInfoDto>();
 
             using (var connection = new SqlConnection(_cs))
             using (var command = new SqlCommand("hr.SP_Employee_GetProfile", connection))
@@ -368,6 +367,7 @@ namespace BusinessHub.Modules.Departments.Repositories.Employees
                     if (reader.NextResult())
                     {
                         int idIndex = reader.GetOrdinal("EmployeeDepartmentID");
+                        int empIdIndex = reader.GetOrdinal("EmployeeID");
                         int deptIDIndex = reader.GetOrdinal("DepartmentID");
                         int deptNameIndex = reader.GetOrdinal("DepartmentName");
                         int startIndex = reader.GetOrdinal("StartDate");
@@ -377,8 +377,9 @@ namespace BusinessHub.Modules.Departments.Repositories.Employees
 
                         while (reader.Read())
                         {
-                            departments.Add(new EmployeeDepartmentDto(
+                            departments.Add(new EmployeeDepartmentInfoDto(
                                 reader.GetInt32(idIndex),
+                                reader.GetInt32(empIdIndex),
                                 reader.GetInt32(deptIDIndex),
                                 reader.GetString(deptNameIndex),
                                 reader.GetDateTime(startIndex),

@@ -1,13 +1,13 @@
 ﻿using BusinessHub.Core.Common;
-using BusinessHub.Modules.HR.DTOs.Departments;
-using BusinessHub.Modules.HR.Repositories.Departments;
+using BusinessHub.Modules.HR.DTOs;
+using BusinessHub.Modules.HR.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessHub.Modules.HR.Services.Departments
+namespace BusinessHub.Modules.HR.Services
 {
     public class DepartmentService
     {

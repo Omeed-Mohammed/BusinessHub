@@ -1,5 +1,5 @@
 ﻿using BusinessHub.Core.Common;
-using BusinessHub.Modules.HR.DTOs.Departments;
+using BusinessHub.Modules.HR.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessHub.Modules.HR.Repositories.Departments
+namespace BusinessHub.Modules.HR.Repositories
 {
     public class DepartmentRepository
     {
